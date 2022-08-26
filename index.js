@@ -33,7 +33,7 @@ bot.on('login',function(){
 });
 
 bot.on('time', function(time) {
-	if(nightskip == "true"){
+	if(nightskip == "false"){
 	if(bot.time.timeOfDay >= 13000){
 	bot.chat('/time set day')
 	}}
@@ -55,7 +55,7 @@ bot.on('time', function(time) {
                 var pitch = Math.random()*pi - (0.5*pi);
                 bot.look(yaw,pitch,false);
                 lastaction = actions[Math.floor(Math.random() * actions.length)];
-                bot.setControlState(lastaction,true);
+                bot.setControlState(lastaction,false);
                 moving = 1;
                 lasttime = bot.time.age;
                 bot.activateItem();
