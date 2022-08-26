@@ -55,7 +55,7 @@ bot.on('time', function(time) {
                 var pitch = Math.random()*pi - (0.5*pi);
                 bot.look(yaw,pitch,false);
                 lastaction = actions[Math.floor(Math.random() * actions.length)];
-                bot.setControlState(lastaction,false);
+                bot.setControlState(lastaction,true);
                 moving = 1;
                 lasttime = bot.time.age;
                 bot.activateItem();
